@@ -179,26 +179,35 @@ function App() {
   }, [numInput, firstSelect, secondSelect])
 
   return (
-    <div className='outer-container'>
-      <div className='inner-container'>
-        <select defaultValue={firstSelect} onChange={changeFirstSelect}>
-          <option value="decimal">Decimal</option>
-          <option value="biner">Biner</option>
-          <option value="octa">Octa</option>
-          <option value="hexa">Hexa</option>
-        </select>
-        <input type='text' onChange={changeInput} value={numInput}></input>
+    <>
+    <h1>Number Converter</h1>
+    <div className='wrapper'>
+      <div className='outer-container'>
+        <h3>From</h3>
+        <div className='inner-container'>
+          <select defaultValue={firstSelect} onChange={changeFirstSelect}>
+            <option value="decimal">Decimal</option>
+            <option value="biner">Biner</option>
+            <option value="octa">Octa</option>
+            <option value="hexa">Hexa</option>
+          </select>
+          <input type='text' onChange={changeInput} value={numInput} placeholder='put something here'></input>
+        </div>
       </div>
-      <div className='inner-container'>
-        <select defaultValue={secondSelect} onChange={changeSecondSelect}>
-          <option value="decimal">Decimal</option>
-          <option value="biner">Biner</option>
-          <option value="octa">Octa</option>
-          <option value="hexa">Hexa</option>
-        </select>
-        <input type='text' value={numOutput} disabled></input>
+      <div className='outer-container'>
+        <h3>To</h3>
+        <div className='inner-container'>
+          <select defaultValue={secondSelect} onChange={changeSecondSelect}>
+            <option value="decimal">Decimal</option>
+            <option value="biner">Biner</option>
+            <option value="octa">Octa</option>
+            <option value="hexa">Hexa</option>
+          </select>
+          <input type='text' value={numOutput} id='result'></input>
+        </div>
       </div>
     </div>
+    </>
   );
 }
 
