@@ -5,6 +5,7 @@ function App() {
   let max = 8;
 
   const decToBiner = (num) => {
+      if(num==='')num=0;
       let result = '';
       let decimal = num % 1;
       num = Math.floor(num);
@@ -22,6 +23,7 @@ function App() {
   }
   
   const decToOctal = (num) => {
+      if(num==='')num=0;
       let result = '';
       let decimal = num % 1;
       num = Math.floor(num);
@@ -39,6 +41,7 @@ function App() {
   }
   
   const decToHexa = (num) => {
+      if(num==='')num=0;
       let hexas = "0123456789ABCDEF";
       let result = '';
       let decimal = num % 1;
@@ -57,6 +60,7 @@ function App() {
   }
   
   const hexaToDec = (num) => {
+      if(num==='')num=0;
       let decimal = num.substring(num.indexOf('.') + 1);
       num = num.substring(0, num.indexOf('.'));
       let result = 0;
@@ -78,6 +82,7 @@ function App() {
   }
   
   const octalToDec = (num) => {
+      if(num==='')num=0;
       let decimal = num.substring(num.indexOf('.') + 1);
       num = num.substring(0, num.indexOf('.'));
       let result = 0;
@@ -98,6 +103,7 @@ function App() {
   }
   
   const binerToDec = (num) => {
+      if(num==='')num=0;
       let decimal = num.substring(num.indexOf('.') + 1);
       num = num.substring(0, num.indexOf('.'));
       let result = 0;
